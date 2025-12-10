@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="260dp"
+    android:layout_height="300dp"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Image principale -->
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Image du plat"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Contenu -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/pic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="12dp">
+
+            <!-- Titre du plat -->
+            <TextView
+                android:id="@+id/titleTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Nom du plat"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/priceTxt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Prix -->
+            <TextView
+                android:id="@+id/priceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$12"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/titleTxt" />
+
+            <!-- Évaluation -->
+            <ImageView
+                android:id="@+id/starIcon2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/star"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTxt"
+                app:layout_constraintBottom_toBottomOf="@id/starTxt"/>
+
+            <TextView
+                android:id="@+id/starTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.6"
+                android:textSize="12sp"
+                android:textColor="@color/blue_grey"
+                android:layout_marginStart="4dp"
+                app:layout_constraintStart_toEndOf="@id/starIcon2"
+                app:layout_constraintTop_toTopOf="@id/starIcon2"
+                app:layout_constraintBottom_toBottomOf="@id/starIcon2"/>
+
+            <!-- Temps de préparation -->
+            <ImageView
+                android:id="@+id/timeIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/time"
+
+                app:layout_constraintStart_toEndOf="@id/starTxt"
+                app:layout_constraintTop_toTopOf="@id/starTxt"
+                app:layout_constraintBottom_toBottomOf="@id/starTxt"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/timeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10-15 min"
+                android:textSize="12sp"
+                android:textColor="@color/blue_grey"
+                app:layout_constraintStart_toEndOf="@id/timeIcon"
+                app:layout_constraintTop_toTopOf="@id/timeIcon"
+                app:layout_constraintBottom_toBottomOf="@id/timeIcon"
+                android:layout_marginStart="4dp"/>
+
+            <!-- Bouton + flottant -->
+            <TextView
+                android:id="@+id/Txt"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="+"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/plus_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
