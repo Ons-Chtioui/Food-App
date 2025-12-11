@@ -1,14 +1,14 @@
-Fonctionnalités principales
+Main Features
 
-Authentification sécurisée via Firebase (inscription et connexion).
+Secure Authentication: User registration and login handled via Firebase for safe access.
 
-Consultation, ajout et gestion des plats avec SQLite.
+Menu Management: View, add, and manage dishes using SQLite.
 
-Passation et suivi des commandes en temps réel via Firebase Realtime Database.
+Real-Time Order Processing: Place and track orders instantly through Firebase Realtime Database.
 
-Interface utilisateur intuitive et responsive.
+Intuitive and Responsive UI: User-friendly interface optimized for all devices.
 
-Notifications pour informer l’utilisateur des changements d’état de commande.
+Order Status Notifications: Receive instant notifications for updates on your orders.
 
 
 
